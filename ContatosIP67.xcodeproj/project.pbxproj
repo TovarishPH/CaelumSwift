@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262A21E10B2E00C113E2 /* AppDelegate.swift */; };
-		D55B262D21E10B2E00C113E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262C21E10B2E00C113E2 /* ViewController.swift */; };
+		D55B262D21E10B2E00C113E2 /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */; };
 		D55B263021E10B2E00C113E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B262E21E10B2E00C113E2 /* Main.storyboard */; };
 		D55B263321E10B2E00C113E2 /* ContatosIP67.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D55B263121E10B2E00C113E2 /* ContatosIP67.xcdatamodeld */; };
 		D55B263521E10B2E00C113E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B263421E10B2E00C113E2 /* Assets.xcassets */; };
 		D55B263821E10B2E00C113E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B263621E10B2E00C113E2 /* LaunchScreen.storyboard */; };
+		D55B264221E11B3600C113E2 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = D55B264121E11B3600C113E2 /* Contato.m */; };
+		D55B264421E122FB00C113E2 /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B264321E122FB00C113E2 /* ContatoDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D55B262721E10B2E00C113E2 /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B262A21E10B2E00C113E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D55B262C21E10B2E00C113E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
 		D55B262F21E10B2E00C113E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D55B263221E10B2E00C113E2 /* ContatosIP67.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67.xcdatamodel; sourceTree = "<group>"; };
 		D55B263421E10B2E00C113E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55B263721E10B2E00C113E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D55B263921E10B2E00C113E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55B263F21E11B3600C113E2 /* ContatosIP67-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContatosIP67-Bridging-Header.h"; sourceTree = "<group>"; };
+		D55B264021E11B3600C113E2 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
+		D55B264121E11B3600C113E2 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		D55B264321E122FB00C113E2 /* ContatoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,16 @@
 			isa = PBXGroup;
 			children = (
 				D55B262A21E10B2E00C113E2 /* AppDelegate.swift */,
-				D55B262C21E10B2E00C113E2 /* ViewController.swift */,
+				D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */,
 				D55B262E21E10B2E00C113E2 /* Main.storyboard */,
 				D55B263421E10B2E00C113E2 /* Assets.xcassets */,
 				D55B263621E10B2E00C113E2 /* LaunchScreen.storyboard */,
 				D55B263921E10B2E00C113E2 /* Info.plist */,
 				D55B263121E10B2E00C113E2 /* ContatosIP67.xcdatamodeld */,
+				D55B264021E11B3600C113E2 /* Contato.h */,
+				D55B264121E11B3600C113E2 /* Contato.m */,
+				D55B263F21E11B3600C113E2 /* ContatosIP67-Bridging-Header.h */,
+				D55B264321E122FB00C113E2 /* ContatoDAO.swift */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 				TargetAttributes = {
 					D55B262621E10B2D00C113E2 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D55B262D21E10B2E00C113E2 /* ViewController.swift in Sources */,
+				D55B264221E11B3600C113E2 /* Contato.m in Sources */,
+				D55B262D21E10B2E00C113E2 /* FormularioContatoViewController.swift in Sources */,
+				D55B264421E122FB00C113E2 /* ContatoDAO.swift in Sources */,
 				D55B263321E10B2E00C113E2 /* ContatosIP67.xcdatamodeld in Sources */,
 				D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */,
 			);
@@ -262,10 +275,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67/ContatosIP67-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,10 +290,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67/ContatosIP67-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
