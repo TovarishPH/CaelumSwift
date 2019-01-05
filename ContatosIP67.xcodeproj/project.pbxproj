@@ -15,6 +15,7 @@
 		D55B263821E10B2E00C113E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B263621E10B2E00C113E2 /* LaunchScreen.storyboard */; };
 		D55B264221E11B3600C113E2 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = D55B264121E11B3600C113E2 /* Contato.m */; };
 		D55B264421E122FB00C113E2 /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B264321E122FB00C113E2 /* ContatoDAO.swift */; };
+		D55B264621E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B264521E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D55B264021E11B3600C113E2 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		D55B264121E11B3600C113E2 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		D55B264321E122FB00C113E2 /* ContatoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
+		D55B264521E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				D55B264121E11B3600C113E2 /* Contato.m */,
 				D55B263F21E11B3600C113E2 /* ContatosIP67-Bridging-Header.h */,
 				D55B264321E122FB00C113E2 /* ContatoDAO.swift */,
+				D55B264521E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				D55B264421E122FB00C113E2 /* ContatoDAO.swift in Sources */,
 				D55B263321E10B2E00C113E2 /* ContatosIP67.xcdatamodeld in Sources */,
 				D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */,
+				D55B264621E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
