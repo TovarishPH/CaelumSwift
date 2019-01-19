@@ -33,7 +33,11 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(exibirMaisAcoes(gesture:)))
+        self.tableView.addGestureRecognizer(longPress)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -138,6 +142,18 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
     func contatoAdicionado(_ contato: Contato) {
         self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato), section: 0)
         print("Contato adicionado: \(contato.nome)")
+    }
+    
+    func exibirMaisAcoes(gesture: UIGestureRecognizer) {
+        if gesture.state == .began {
+            let ponto = gesture.location(in: self.tableView)
+            if let indexPath = self.tableView.indexPathForRow(at: ponto) {
+                let contato = self.dao.buscaContatoNaPosicao(indexPath.row)
+                let acoes = GerenciadorDeAcoes(do: contato)
+                
+                acoes.exibirAcoes(em: self)
+            }
+        }
     }
     
     
