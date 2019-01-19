@@ -12,15 +12,27 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
 
     var dao: ContatoDAO
     static let celIdentifier = "Cell"
+    var contato: Contato!
     
     required init?(coder aDecoder: NSCoder) {
         self.dao = ContatoDAO.sharedInstance()
         super.init(coder: aDecoder)
     }
     
+    func exibeFormulario(_ contato:Contato) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let formulario = storyboard.instantiateViewController(withIdentifier: "Form-Contato") as! FormularioContatoViewController
+        
+        formulario.contato = contato
+        
+        self.navigationController?.pushViewController(formulario, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -73,17 +85,24 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            self.dao.remove(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contatoSelecionado = dao.buscaContatoNaPosicao(indexPath.row)
+        self.exibeFormulario(contatoSelecionado)
+        print("Nome: \(contatoSelecionado.nome)")
+    }
+    
 
     /*
     // Override to support rearranging the table view.

@@ -60,7 +60,7 @@
         <!--FormularioContatoViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Cadastro" id="BYZ-38-t0r" userLabel="FormularioContatoViewController" customClass="FormularioContatoViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Form-Contato" title="Cadastro" id="BYZ-38-t0r" userLabel="FormularioContatoViewController" customClass="FormularioContatoViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

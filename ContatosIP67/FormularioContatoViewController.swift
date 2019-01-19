@@ -32,11 +32,14 @@ class FormularioContatoViewController: UIViewController {
         
         print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(site)")*/
         
-        self.contato = Contato();
-        contato.nome = self.nome.text!
-        contato.telefone = self.telefone.text!
-        contato.endereco = self.endereco.text!
-        contato.site = self.site.text!
+        if contato == nil {
+            self.contato = Contato()
+        }
+        
+        self.contato.nome = self.nome.text!
+        self.contato.telefone = self.telefone.text!
+        self.contato.endereco = self.endereco.text!
+        self.contato.site = self.site.text!
         
         //print(contato)
     }
@@ -47,9 +50,25 @@ class FormularioContatoViewController: UIViewController {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    func atualizaContato() {
+        pegaDadosDoFormulario()
+        
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if contato != nil {
+            self.nome.text = contato.nome
+            self.telefone.text = contato.telefone
+            self.endereco.text = contato.endereco
+            self.site.text = contato.site
+            
+            let botaoAlterar = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
+            
+            self.navigationItem.rightBarButtonItem = botaoAlterar
+        }
     }
 
     override func didReceiveMemoryWarning() {
