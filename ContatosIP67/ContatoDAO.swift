@@ -43,4 +43,9 @@ class ContatoDAO: NSObject {
         contatos.remove(at:posicao)
     }
     
+    //Busca a Posicao de um contato
+    func buscaPosicaoDoContato(_ contato:Contato) -> Int {
+        return contatos.index(of: contato)!
+    }
+    
 }

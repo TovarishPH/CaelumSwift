@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D52C0FF521F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C0FF421F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift */; };
 		D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262A21E10B2E00C113E2 /* AppDelegate.swift */; };
 		D55B262D21E10B2E00C113E2 /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */; };
 		D55B263021E10B2E00C113E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B262E21E10B2E00C113E2 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D52C0FF421F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D55B262721E10B2E00C113E2 /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B262A21E10B2E00C113E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				D55B263F21E11B3600C113E2 /* ContatosIP67-Bridging-Header.h */,
 				D55B264321E122FB00C113E2 /* ContatoDAO.swift */,
 				D55B264521E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift */,
+				D52C0FF421F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				D55B264221E11B3600C113E2 /* Contato.m in Sources */,
 				D55B262D21E10B2E00C113E2 /* FormularioContatoViewController.swift in Sources */,
+				D52C0FF521F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				D55B264421E122FB00C113E2 /* ContatoDAO.swift in Sources */,
 				D55B263321E10B2E00C113E2 /* ContatosIP67.xcdatamodeld in Sources */,
 				D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */,
@@ -323,6 +327,7 @@
 				D55B263E21E10B2E00C113E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
