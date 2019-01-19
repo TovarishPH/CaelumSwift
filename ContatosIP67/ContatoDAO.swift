@@ -30,4 +30,12 @@ class ContatoDAO: NSObject {
         self.contatos = Array()
         super.init()
     }
+    
+    func listaTodos() -> [Contato] {
+        return contatos
+    }
+    
+    func buscaContatoNaPosicao(_ posicao:Int) -> Contato {
+        return contatos[posicao]
+    }
 }

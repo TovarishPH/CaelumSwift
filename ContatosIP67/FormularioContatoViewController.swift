@@ -15,6 +15,7 @@ class FormularioContatoViewController: UIViewController {
     @IBOutlet var endereco: UITextField!
     @IBOutlet var site: UITextField!
     
+    var contato: Contato!
     var dao:ContatoDAO
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,7 +24,7 @@ class FormularioContatoViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    @IBAction func pegaDadosDoFormulario() {
+    func pegaDadosDoFormulario() {
         /*let nome = self.nome.text!
         let telefone = self.telefone.text!
         let endereco = self.endereco.text!
@@ -31,14 +32,19 @@ class FormularioContatoViewController: UIViewController {
         
         print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(site)")*/
         
-        let contato: Contato = Contato()
+        self.contato = Contato();
         contato.nome = self.nome.text!
         contato.telefone = self.telefone.text!
         contato.endereco = self.endereco.text!
         contato.site = self.site.text!
         
-        dao.adiciona(contato)
         //print(contato)
+    }
+    
+    @IBAction func criaContato() {
+        self.pegaDadosDoFormulario()
+        dao.adiciona(contato)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

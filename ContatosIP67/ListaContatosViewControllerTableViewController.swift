@@ -10,6 +10,14 @@ import UIKit
 
 class ListaContatosViewControllerTableViewController: UITableViewController {
 
+    var dao: ContatoDAO
+    static let celIdentifier = "Cell"
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.dao = ContatoDAO.sharedInstance()
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,28 +32,38 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dao.listaTodos().count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let contato:Contato = self.dao.buscaContatoNaPosicao(indexPath.row)
+        
+        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: ListaContatosViewControllerTableViewController.celIdentifier)
+        
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: ListaContatosViewControllerTableViewController.celIdentifier)
+        }
+        
+        cell?.textLabel?.text = contato.nome
 
-        // Configure the cell...
-
-        return cell
+        return cell!
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
