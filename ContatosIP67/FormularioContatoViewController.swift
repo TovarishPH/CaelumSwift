@@ -81,7 +81,9 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         
         //arredonda o formato da imageView
         imageView.layer.cornerRadius = imageView.frame.size.width/2
-        imageView.clipsToBounds = true
+        //imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 2
     }
     
     func selecionaFoto(sender: AnyObject) {
