@@ -6,11 +6,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Contatos-->
         <scene sceneID="79n-94-GHA">
             <objects>
                 <navigationController id="uMA-QI-Eq7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="f9o-vm-IpC"/>
+                    <tabBarItem key="tabBarItem" title="Contatos" image="lista-contatos" id="f9o-vm-IpC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9DQ-3W-mPd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,15 +28,15 @@
             <objects>
                 <tableViewController id="EnS-I6-YIq" customClass="ListaContatosViewControllerTableViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="l8Q-vN-T9p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ckd-y9-syc">
-                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckd-y9-syc" id="MPF-KW-SRQ">
-                                    <frame key="frameInset" width="414" height="43"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -76,17 +76,17 @@
             </objects>
             <point key="canvasLocation" x="-2846" y="490"/>
         </scene>
-        <!--Item-->
+        <!--Mapa-->
         <scene sceneID="M8p-Vu-aiK">
             <objects>
                 <navigationController id="wBq-61-Uxk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pFq-5t-Wsd"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapa-contatos" id="pFq-5t-Wsd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VqU-dz-9CI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mBV-Je-W3Q" kind="show" id="ii9-51-7Qj"/>
+                        <segue destination="mBV-Je-W3Q" kind="relationship" relationship="rootViewController" id="fy2-2b-a4W"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G71-Ak-UHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +102,7 @@
                         <viewControllerLayoutGuide type="bottom" id="H17-IN-01m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jza-Uu-WWS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0mQ-Dj-YjC">
@@ -115,6 +115,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TIB-ej-eeC"/>
                     <connections>
                         <outlet property="mapa" destination="0mQ-Dj-YjC" id="T3j-HP-eNr"/>
                     </connections>
@@ -131,8 +132,8 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="TPKeyboardAvoidingScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9J-Ee-awe">
@@ -195,6 +196,42 @@
                                 <frame key="frameInset" minX="131" minY="90" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Do-S6-Q3f">
+                                <frame key="frameInset" minX="70" minY="451" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-AR-vfQ">
+                                <frame key="frameInset" minX="53" minY="506" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-8b-FhV">
+                                <frame key="frameInset" minX="146" minY="446" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tmK-PK-xvv">
+                                <frame key="frameInset" minX="146" minY="501" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hah-D6-DL5">
+                                <frame key="frameInset" minX="336" minY="470" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="gps"/>
+                                <connections>
+                                    <action selector="buscarCoordenadas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKr-71-oIe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -208,6 +245,8 @@
                     <connections>
                         <outlet property="endereco" destination="Fx2-sA-FRl" id="EZX-yg-vzH"/>
                         <outlet property="imageView" destination="PcJ-g9-USr" id="2ix-MS-isD"/>
+                        <outlet property="latitude" destination="OF1-8b-FhV" id="gjd-YQ-h0Q"/>
+                        <outlet property="longitude" destination="tmK-PK-xvv" id="434-F1-tqV"/>
                         <outlet property="nome" destination="qnm-GV-EVu" id="C9L-Fx-82a"/>
                         <outlet property="site" destination="y6j-AU-bSV" id="fOy-gz-1xq"/>
                         <outlet property="telefone" destination="05r-pD-voh" id="oxs-Sq-rCk"/>
@@ -218,4 +257,9 @@
             <point key="canvasLocation" x="-88.405797101449281" y="121.46739130434784"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gps" width="30" height="30"/>
+        <image name="lista-contatos" width="30" height="30"/>
+        <image name="mapa-contatos" width="30" height="30"/>
+    </resources>
 </document>

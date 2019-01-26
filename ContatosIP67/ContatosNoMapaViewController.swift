@@ -13,10 +13,16 @@ class ContatosNoMapaViewController: UIViewController {
 
     @IBOutlet weak var mapa: MKMapView!
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        let botaoLocalizacao = MKUserTrackingBarButtonItem(mapView: self.mapa)
+        self.navigationItem.rightBarButtonItem = botaoLocalizacao
     }
 
     override func didReceiveMemoryWarning() {
