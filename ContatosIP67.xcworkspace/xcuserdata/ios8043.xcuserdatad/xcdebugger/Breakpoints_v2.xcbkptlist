@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ContatosIP67/FormularioContatoViewController.swift"
-            timestampString = "570220427.322064"
+            timestampString = "570221208.11516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "buscarCoordenadas(_:)"
             landmarkType = "7">
          </BreakpointContent>

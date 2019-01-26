@@ -18,12 +18,16 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var latitude: UITextField!
     @IBOutlet weak var longitude: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     var contato: Contato!
     var dao:ContatoDAO
     var delegate:FormularioContatoViewControllerDelegate?
     
     @IBAction func buscarCoordenadas(_ sender: UIButton) {
+        self.loading.startAnimating()
+        sender.isEnabled = false
+        
         let geocoder = CLGeocoder()
         
         if self.endereco.text!.isEmpty {
@@ -40,9 +44,10 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
                     self.latitude.text = coordenada.latitude.description
                     self.longitude.text = coordenada.longitude.description
                 }
+                self.loading.stopAnimating()
+                sender.isEnabled = true
             }
         }
-        
         
     }
     

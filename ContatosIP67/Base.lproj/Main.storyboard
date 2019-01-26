@@ -224,8 +224,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sEQ-GR-WO3">
+                                <frame key="frameInset" minX="355" minY="475" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hah-D6-DL5">
-                                <frame key="frameInset" minX="336" minY="470" width="35" height="30"/>
+                                <frame key="frameInset" minX="330" minY="470" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="gps"/>
                                 <connections>
@@ -246,6 +250,7 @@
                         <outlet property="endereco" destination="Fx2-sA-FRl" id="EZX-yg-vzH"/>
                         <outlet property="imageView" destination="PcJ-g9-USr" id="2ix-MS-isD"/>
                         <outlet property="latitude" destination="OF1-8b-FhV" id="gjd-YQ-h0Q"/>
+                        <outlet property="loading" destination="sEQ-GR-WO3" id="YwS-7Y-yhl"/>
                         <outlet property="longitude" destination="tmK-PK-xvv" id="434-F1-tqV"/>
                         <outlet property="nome" destination="qnm-GV-EVu" id="C9L-Fx-82a"/>
                         <outlet property="site" destination="y6j-AU-bSV" id="fOy-gz-1xq"/>
