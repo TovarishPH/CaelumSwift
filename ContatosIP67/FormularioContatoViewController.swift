@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FormularioContatoViewController: UIViewController {
+class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet var nome: UITextField!
     @IBOutlet var telefone: UITextField!
     @IBOutlet var endereco: UITextField!
     @IBOutlet var site: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     var contato: Contato!
     var dao:ContatoDAO
@@ -75,6 +76,34 @@ class FormularioContatoViewController: UIViewController {
             
             self.navigationItem.rightBarButtonItem = botaoAlterar
         }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto(sender:)))
+        self.imageView.addGestureRecognizer(tap)
+        
+        //arredonda o formato da imageView
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
+    }
+    
+    func selecionaFoto(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            //camera disponivel
+        } else {
+            //usar biblioteca
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let imagemSelecionada = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.imageView.image = imagemSelecionada
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

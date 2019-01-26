@@ -24,6 +24,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Permissao Camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Permissao Biblioteca</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
