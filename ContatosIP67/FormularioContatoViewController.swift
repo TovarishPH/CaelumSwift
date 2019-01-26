@@ -94,6 +94,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     func selecionaFoto(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             //camera disponivel
+            //exercicio 14.7 - simulador nao possui camera para a execucao do exercicio
         } else {
             //usar biblioteca
             let imagePicker = UIImagePickerController()

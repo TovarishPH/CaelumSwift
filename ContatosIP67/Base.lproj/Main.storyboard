@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uMA-QI-Eq7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMa-27-KRs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="79n-94-GHA">
             <objects>
                 <navigationController id="uMA-QI-Eq7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="f9o-vm-IpC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9DQ-3W-mPd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -56,6 +57,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng1-0N-9Z5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-914" y="122"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="v2m-Cm-Whd">
+            <objects>
+                <tabBarController id="kMa-27-KRs" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fxp-4f-eYi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uMA-QI-Eq7" kind="relationship" relationship="viewControllers" id="1Pu-Yd-Pt6"/>
+                        <segue destination="wBq-61-Uxk" kind="relationship" relationship="viewControllers" id="qF5-z3-I7x"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCb-Qn-tTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2846" y="490"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="M8p-Vu-aiK">
+            <objects>
+                <navigationController id="wBq-61-Uxk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pFq-5t-Wsd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VqU-dz-9CI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mBV-Je-W3Q" kind="show" id="ii9-51-7Qj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G71-Ak-UHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1759" y="898"/>
+        </scene>
+        <!--Contatos No Mapa View Controller-->
+        <scene sceneID="Yvt-dO-EqG">
+            <objects>
+                <viewController id="mBV-Je-W3Q" customClass="ContatosNoMapaViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eIp-aT-a4W"/>
+                        <viewControllerLayoutGuide type="bottom" id="H17-IN-01m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jza-Uu-WWS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0mQ-Dj-YjC">
+                                <frame key="frameInset" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mBV-Je-W3Q" id="8Y3-kb-fey"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapa" destination="0mQ-Dj-YjC" id="T3j-HP-eNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZG-Xq-prm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914" y="898"/>
         </scene>
         <!--FormularioContatoViewController-->
         <scene sceneID="tne-QT-ifu">
