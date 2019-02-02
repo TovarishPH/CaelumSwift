@@ -41,10 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        
+        // Linha comentada apos a mudanca dos metodos de Core Data para a classe CoreDataUtil
+        //self.saveContext()
     }
 
-    // MARK: - Core Data stack
+    
+    //Codigo passado para a classe CoreDataUtil
+/*    // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -87,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
+    }*/
 
 }
 

@@ -19,8 +19,8 @@ class ContatosNoMapaViewController: UIViewController, MKMapViewDelegate {
     let locationManager = CLLocationManager()
     
     override func viewWillAppear(_ animated: Bool) {
-        self.contatos = dao.listaTodos()
-        self.mapa.addAnnotations(self.contatos)
+        contatos = dao.listaTodos()
+        mapa.addAnnotations(contatos)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

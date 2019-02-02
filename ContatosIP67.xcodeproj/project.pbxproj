@@ -10,9 +10,10 @@
 		5FD35129251AFA2C76380705 /* Pods_ContatosIP67.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19171CC37A4EEABD2BCDC2A5 /* Pods_ContatosIP67.framework */; };
 		D52C0FF521F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C0FF421F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift */; };
 		D52C0FF721F3A51300948E8F /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C0FF621F3A51300948E8F /* GerenciadorDeAcoes.swift */; };
+		D54A935F2205D8E9003201DE /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A935E2205D8E9003201DE /* CoreDataUtil.swift */; };
+		D54A93622205FCC8003201DE /* ContatosIP67A.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D54A93602205FCC8003201DE /* ContatosIP67A.xcdatamodeld */; };
 		D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262A21E10B2E00C113E2 /* AppDelegate.swift */; };
 		D55B262D21E10B2E00C113E2 /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */; };
-		D55B263321E10B2E00C113E2 /* ContatosIP67.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D55B263121E10B2E00C113E2 /* ContatosIP67.xcdatamodeld */; };
 		D55B263521E10B2E00C113E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B263421E10B2E00C113E2 /* Assets.xcassets */; };
 		D55B263821E10B2E00C113E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B263621E10B2E00C113E2 /* LaunchScreen.storyboard */; };
 		D55B264221E11B3600C113E2 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = D55B264121E11B3600C113E2 /* Contato.m */; };
@@ -28,10 +29,11 @@
 		9A88BF5B19AD1C5D66C6C451 /* Pods-ContatosIP67.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosIP67.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosIP67/Pods-ContatosIP67.debug.xcconfig"; sourceTree = "<group>"; };
 		D52C0FF421F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D52C0FF621F3A51300948E8F /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
+		D54A935E2205D8E9003201DE /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtil.swift; sourceTree = "<group>"; };
+		D54A93612205FCC8003201DE /* ContatosIP67A.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67A.xcdatamodel; sourceTree = "<group>"; };
 		D55B262721E10B2E00C113E2 /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B262A21E10B2E00C113E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D55B262C21E10B2E00C113E2 /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
-		D55B263221E10B2E00C113E2 /* ContatosIP67.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67.xcdatamodel; sourceTree = "<group>"; };
 		D55B263421E10B2E00C113E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55B263721E10B2E00C113E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D55B263921E10B2E00C113E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +104,6 @@
 				D55B263621E10B2E00C113E2 /* LaunchScreen.storyboard */,
 				D55B263921E10B2E00C113E2 /* Info.plist */,
 				D5B7FF3C21FCC42100F685CF /* VilaMariana.gpx */,
-				D55B263121E10B2E00C113E2 /* ContatosIP67.xcdatamodeld */,
 				D55B264021E11B3600C113E2 /* Contato.h */,
 				D55B264121E11B3600C113E2 /* Contato.m */,
 				D55B263F21E11B3600C113E2 /* ContatosIP67-Bridging-Header.h */,
@@ -111,6 +112,8 @@
 				D52C0FF421F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift */,
 				D52C0FF621F3A51300948E8F /* GerenciadorDeAcoes.swift */,
 				D5B7FF3521FCA24C00F685CF /* ContatosNoMapaViewController.swift */,
+				D54A935E2205D8E9003201DE /* CoreDataUtil.swift */,
+				D54A93602205FCC8003201DE /* ContatosIP67A.xcdatamodeld */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -229,14 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54A93622205FCC8003201DE /* ContatosIP67A.xcdatamodeld in Sources */,
 				D55B264221E11B3600C113E2 /* Contato.m in Sources */,
 				D55B262D21E10B2E00C113E2 /* FormularioContatoViewController.swift in Sources */,
 				D5B7FF3621FCA24C00F685CF /* ContatosNoMapaViewController.swift in Sources */,
 				D52C0FF721F3A51300948E8F /* GerenciadorDeAcoes.swift in Sources */,
 				D52C0FF521F38B7E00948E8F /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				D55B264421E122FB00C113E2 /* ContatoDAO.swift in Sources */,
-				D55B263321E10B2E00C113E2 /* ContatosIP67.xcdatamodeld in Sources */,
 				D55B262B21E10B2E00C113E2 /* AppDelegate.swift in Sources */,
+				D54A935F2205D8E9003201DE /* CoreDataUtil.swift in Sources */,
 				D55B264621E12FDB00C113E2 /* ListaContatosViewControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,13 +413,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D55B263121E10B2E00C113E2 /* ContatosIP67.xcdatamodeld */ = {
+		D54A93602205FCC8003201DE /* ContatosIP67A.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D55B263221E10B2E00C113E2 /* ContatosIP67.xcdatamodel */,
+				D54A93612205FCC8003201DE /* ContatosIP67A.xcdatamodel */,
 			);
-			currentVersion = D55B263221E10B2E00C113E2 /* ContatosIP67.xcdatamodel */;
-			path = ContatosIP67.xcdatamodeld;
+			currentVersion = D54A93612205FCC8003201DE /* ContatosIP67A.xcdatamodel */;
+			path = ContatosIP67A.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

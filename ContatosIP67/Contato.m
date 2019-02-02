@@ -26,4 +26,6 @@
     return self.site;
 }
 
+@dynamic nome, telefone, endereco, site, latitude, longitude, foto;
+
 @end
