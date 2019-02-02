@@ -66,7 +66,10 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(site)")*/
         
         if contato == nil {
-            self.contato = Contato()
+            //Antes do Core Data
+            //self.contato = Contato()
+            //Com a implementacao do Core Data
+            self.contato = dao.novoContato()
         }
         
         self.contato.nome = self.nome.text!
@@ -101,6 +104,8 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         self.delegate?.contatoAtualizado(contato)
         
         _ = self.navigationController?.popViewController(animated: true)
+        
+        ContatoDAO.sharedInstance().saveContext()
     }
     
     override func viewDidLoad() {

@@ -18,6 +18,7 @@ class ContatoDAO: CoreDataUtil {
     func adiciona(_ contato:Contato){
         contatos.append(contato)
         print(contatos)
+        self.saveContext()
     }
     
     static func sharedInstance() -> ContatoDAO {
@@ -30,9 +31,12 @@ class ContatoDAO: CoreDataUtil {
     override private init() {
         self.contatos = Array()
         super.init()
+        
         //Carrega os dados na inicializacao do app
         self.inserirDadosIniciais()
-        print("Caminho do DB: \(NSHomeDirectory())")
+        print(">>>>> Caminho do DB: \(NSHomeDirectory())")
+        
+        self.carregaContatos()
     }
     
     func listaTodos() -> [Contato] {
@@ -44,7 +48,11 @@ class ContatoDAO: CoreDataUtil {
     }
     
     func remove(_ posicao:Int) {
+        //Apos implementacao do Core Data
+        persistentContainer.viewContext.delete(contatos[posicao])
+        
         contatos.remove(at:posicao)
+        self.saveContext()
     }
     
     //Busca a Posicao de um contato
@@ -75,4 +83,23 @@ class ContatoDAO: CoreDataUtil {
         }
     }
     
+    func carregaContatos() {
+        let busca = NSFetchRequest<Contato>(entityName: "Contato")
+        
+        let orderPorNome = NSSortDescriptor(key: "nome", ascending: true)
+        
+        busca.sortDescriptors = [orderPorNome]
+        
+        do {
+            self.contatos = try self.persistentContainer.viewContext.fetch(busca)
+        } catch let error as NSError {
+           print("Fetch Falhou Miseravelmente: \(error.localizedDescription)")
+        }
+    }
+    
+    func novoContato() -> Contato {
+        return NSEntityDescription.insertNewObject(forEntityName: "Contato", into: self.persistentContainer.viewContext) as! Contato
+    }
+    
 }
+    
