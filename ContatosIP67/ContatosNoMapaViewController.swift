@@ -72,6 +72,15 @@ class ContatosNoMapaViewController: UIViewController, MKMapViewDelegate {
         return pino
     }
     
+    // exercicio opcional 5 - pag 2006
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let pinToZoomOn = view.annotation
+        
+        mapView.showAnnotations([pinToZoomOn!], animated: true)
+        
+        mapView.selectAnnotation(pinToZoomOn!, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation
